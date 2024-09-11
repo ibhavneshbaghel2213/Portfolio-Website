@@ -1,0 +1,71 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin screen-1($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+
+@include screen-1(1800){
+    .modelWrapper{
+        .model{
+
+        }
+    }
+}
+
+@include screen(991px){
+    .modelWrapper{
+        .model{
+            min-height: 40vh;
+            .previousBtn{
+                
+                left: -8%;
+               
+            }
+            .nextBtn{
+              
+                right: -8%;
+                
+            }
+        }
+    }
+}
+
+@include screen(767px){
+    .modelWrapper{
+        .model{
+            min-height: 40vh;
+            .previousBtn{
+                left: -12%;
+                font-size: 1.6rem;
+            }
+            .nextBtn{
+                right: -12%;
+                font-size: 1.6rem;
+
+            }
+        }
+    }
+}
+
+@include screen(525px){
+    .modelWrapper{
+        .model{
+            min-height: 30vh;
+            .previousBtn{
+                left: -18%;
+                font-size: 1.2rem;
+            }
+            .nextBtn{
+                right: -18%;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

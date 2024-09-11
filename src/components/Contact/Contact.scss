@@ -1,0 +1,186 @@
+@import url(./ContactHead.scss);
+
+.contact {
+    margin: 0 0 0 11rem;
+    &::before {
+        content: "<section>";
+        display: block;
+        font-family: "Indie Flower", cursive;
+        color: grey;
+        font-size: 1rem;
+    }
+    &::after {
+        content: "</section>";
+        display: block;
+        font-family: "Indie Flower", cursive;
+        color: grey;
+        font-size: 1rem;
+    }
+    
+    form {
+        &::before {
+            content: "<form>";
+            display: block;
+            font-family: "Indie Flower", cursive;
+            color: grey;
+            font-size: 1rem;
+        }
+        &::after {
+            content: "</form>";
+            display: block;
+            font-family: "Indie Flower", cursive;
+            color: grey;
+            font-size: 1rem;
+        }
+        margin: 2rem 20rem 2rem 20rem;
+        .name55{
+            position: relative;
+            &::after{
+                content: " ";
+                width: var(--dataAfter);
+                height: 3px;
+                border-radius: 10px;
+                position: absolute;
+                bottom: 0;
+                left: .8rem;
+                background-color: var(--colorAfter);
+                transition: all .3s;
+            }
+          
+
+        }
+        .name65{
+            position: relative;
+            &::after{
+                content: " ";
+                width: var(--dataAfter);
+                height: 3px;
+                border-radius: 10px;
+                position: absolute;
+                bottom: 5px;
+                left: .8rem;
+                background-color: var(--colorAfter);
+                transition: all .3s;
+            }
+          
+
+        }
+        input {
+            width: 100%;
+            outline: none;
+            height: 3rem;
+            background-color: #232525;
+            padding-left: 2rem;
+            caret-color: white;
+            overflow: hidden;
+            color: white;
+            
+         
+            &::placeholder {
+                color: grey;
+                font-size: 1.2rem;
+            }
+            &:focus {
+                color: aqua;
+                &::placeholder {
+                    color: transparent;
+                }
+                 
+               
+            }
+        }
+        .subject {
+            margin-top: 1rem;
+        }
+        textarea {
+            margin-top: 1.5rem;
+            width: 100%;
+            resize: none;
+            height: 10rem;
+            outline: none;
+            background-color: #232525;
+            padding: 1rem 0 0 2rem;
+            font-size: 1.2rem;
+            caret-color: white;
+            color: white;
+
+            &:focus {
+                color: aqua;
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+            
+        }
+        .send {
+            text-align: end;
+            margin-right: 3rem;
+        }
+        button {
+            margin-top: 1.5rem;
+            padding: 5px 30px 5px 30px;
+            border-radius: 10px;
+            color: aqua;
+            font-weight: 400;
+            font-size: 1.3rem;
+            letter-spacing: 0.15rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            background: transparent;
+            border: 1px solid aqua;
+
+            &:before {
+                content: "";
+                font-family: "Merriweather", serif;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: aqua;
+                transition: all 0.3s;
+                border-radius: 10px;
+                z-index: -1;
+                clip-path: polygon(0 0, 78% 0, 100% 100%, 0% 100%);
+            }
+            &:hover {
+                color: black;
+                &:before {
+                    width: 120%;
+                }
+            }
+        }
+        .email {
+            font-size: 1.1rem;
+            background-color: aquamarine;
+            padding: 7px;
+            color: black;
+            width: fit-content;
+            border-radius: 10px;
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    25% {
+        transform: scale(0.8, 1.3);
+    }
+    50% {
+        transform: scale(1.1, 0.8);
+    }
+    75% {
+        transform: scale(0.7, 1.2);
+    }
+}
+
+
+.addAfter{
+    &::after{
+        width: 93%;
+    }
+}

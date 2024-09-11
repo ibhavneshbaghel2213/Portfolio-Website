@@ -1,0 +1,61 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin screen-1($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+@include screen-1(991px) {
+	.hamburger-icon {
+		display: none;
+	}
+}
+
+@include screen(991px) {
+	#openmenu:checked ~ nav {
+		transform: translateX(0);
+	}
+	nav {
+		transform: translateX(-100vw);
+		transition: all 0.4s ease-in-out;
+		width: 20rem;
+		z-index: 15;
+		.nav-list {
+			background-color: #171818;
+		}
+	}
+}
+
+@include screen(767px) {
+	nav {
+		transform: translateX(-100vw);
+		transition: all 0.4s ease-in-out;
+		width: 20rem;
+		
+	}
+}
+
+@include screen(575px) {
+	nav {
+		width: 10rem;
+	}
+	.hamburger-icon {
+		top: 1rem !important;
+		right: 1.5rem !important;
+	}
+	.hamburger-icon span {
+		height: 3px !important;
+		width: 35px !important;
+	}
+}
+
+@include screen(320px) {
+	nav {
+		display: none;
+	}
+}

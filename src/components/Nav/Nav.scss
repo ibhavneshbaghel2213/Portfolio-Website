@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+nav {
+    position: fixed;
+    width: 10rem;
+    .nav-head {
+        height: 35vh;
+        padding: 1.5rem 0 0 0;
+        text-align: center;
+        background-color: #100f0d;
+        p {
+            margin-top: 0.6rem;
+            letter-spacing: 3px;
+            font-size: 1.5rem;
+            font-family: "Righteous", cursive;
+            color: white;
+            &:last-child {
+                font-family: "Indie Flower", cursive;
+                font-size: 0.8rem;
+                font-weight: 800;
+                color: aqua;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .nav-list {
+        background-color: #1718189e;
+        height: 65vh;
+        ul {
+            list-style: none;
+            color: #979595;
+            padding-left: 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: "Poppins", sans-serif;
+            .navLinks {
+                text-decoration: none;
+                color: #979595;
+                li {
+                    border-bottom: 1px solid #040505f0;
+                    padding: 12px;
+                }
+                &:first-child {
+                    color: transparent;
+                }
+                &:nth-child(4) {
+                    color: green;
+                    user-select: none;
+                }
+                &:hover {
+                    color: aqua;
+                    &:nth-child(4) {
+                        color: green;
+                    }
+                    &:first-child {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+        .nav-contact {
+            margin-top: 1.8rem;
+            font-size: 2rem;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            a {
+                color: #979595;
+            }
+            .linkedin {
+                &:hover {
+                    color: #0a66c2;
+                }
+            }
+            .instagram {
+                &:hover {
+
+                    background: radial-gradient(
+                        circle at 30% 107%,
+                        #fdf497 0%,
+                        #fdf497 5%,
+                        #fd5949 45%,
+                        #d6249f 60%,
+                        #285aeb 90%
+                    );
+                    color: white;
+                    border-radius: 8px;
+                    
+                    
+                }
+            }
+            .git {
+                &:hover {
+                    color: #e0e0e0;
+                }
+            }
+        }
+    }
+}

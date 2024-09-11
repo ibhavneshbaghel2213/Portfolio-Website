@@ -1,0 +1,198 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@include screen(1296px){
+    .expirence{
+        padding-left: 4rem!important;
+    }
+}
+
+
+@include screen(1199px){
+    .about{
+        .about-text{
+            .aboutHead{
+                button{
+                    font-size: 2.5rem;
+                }
+            }
+            .aboutMe{
+                p{
+                    font-size: .8rem;
+                }
+            }
+        }
+        canvas{
+            height: 400px;
+            width: 400px;
+        }
+    }
+    .aboutContent{
+        flex-direction: column;
+        .expirence{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: -5rem;
+            // gap: 1rem;
+            .boxContainer{
+                height: 16rem;
+            }
+        }
+    }
+}
+
+@include screen(991px){
+    .about{
+        margin: 0 0 0 1rem;
+        flex-direction: column;
+        .skills{
+            width: 400px;
+            margin: auto;
+        }
+    }
+    .about2{
+        margin: 1rem 0 0 1rem!important;
+    }
+}
+
+@include screen(767px){
+    .about{
+        .aboutMe{
+            padding: 0 2rem 0 2rem;
+            &::after{
+                font-size: .8rem!important;
+            }
+            &::before{
+                font-size: .8rem!important;
+            }
+        }
+    }
+    .about2{
+        .aboutContent{
+            margin-right: 5rem;
+            .expirence{
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@include screen(575px){
+    .about{
+        margin-left: 0;
+        .about-text{
+            margin-left: .5rem;
+            .aboutHead{
+                button{
+                    font-size: 1.5rem;
+                }
+                &::before{
+                    font-size: .8rem;
+                }
+                &::after{
+                    font-size: .8rem;
+                }
+            }
+        }
+        .aboutMe{
+            padding: 0 1rem 0 0!important;
+            p{
+                margin-bottom: .5rem;
+                font-size: .6rem!important;
+            }
+            &::before{
+                font-size: .5rem!important;
+            }
+            &::after{
+                font-size: .5rem!important;
+            }
+
+        }
+        .skills{
+            height: 230px;
+            width: 230px;
+            canvas{
+                height: 230px;
+                width: 230px;
+            }
+        }
+    }
+    .about2{
+        margin-bottom: 4rem!important;
+        .aboutHead{
+            button{
+                font-size: 1.5rem;
+            }
+            &::before{
+                font-size: .8rem;
+            }
+            &::after{
+                font-size: .8rem;
+            }
+        }
+        .aboutMe{
+            padding: 0 0 0 0!important;
+            margin-right: 2rem;
+            p{
+                margin-bottom: .5rem;
+                font-size: .6rem!important;
+            }
+            &::before{
+                font-size: .5rem!important;
+            }
+            &::after{
+                font-size: .5rem!important;
+            }
+
+        }
+        .aboutContent{
+            margin-right: 0;
+            // align-items: flex-start;
+            .expirence{
+                padding-left: 0!important;
+                margin-left: -.7rem;
+                .boxContainer{
+                    padding: .8rem!important;
+                    box-shadow: 0px -4px 14px 0px #7b7777;
+                    width: 16rem!important;
+                    height: 9rem;
+                    p{
+                        &:last-child{
+                            margin-top: 1rem;
+                        }
+                        &:nth-child(2){
+                            font-size: .9rem!important;
+                        }
+                        &:nth-child(3){
+                            font-size: .7rem;
+                        }
+                        &:last-child{
+                            font-size: .7rem!important;
+                            margin-top: .8rem!important;
+
+                        }
+                    }
+                    h2{
+                        font-size: 1.3rem;
+                        margin-bottom: .5rem!important;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+@include screen(320px){
+    .about{
+        display: none!important;
+    }
+    .about2{
+        display: none;
+    }
+}

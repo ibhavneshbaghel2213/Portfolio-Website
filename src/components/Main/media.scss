@@ -1,0 +1,123 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin screen-1($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+@include screen(991px){
+	.intro{
+		margin-left: 1rem;
+		.intro-btn{
+			top: 8rem!important;
+		}
+	}
+}
+
+@include screen-1(991px){
+	.intro{
+		.intro-text{
+			.intro-btn{
+				top: 8rem;
+			}
+
+		}
+	}
+}
+
+@include screen(767px){
+	.intro{
+		.html{
+			&::before{
+				left: 0.5rem!important;
+			}
+			&::after{
+				left: 3rem!important;
+			}
+		}
+		.intro-btn{
+			left: 2rem!important;
+			button{
+				font-size: 3rem!important;
+			}
+			&::after{
+				font-size: .8rem!important;
+			}
+			&::before{
+				font-size: .8rem!important;
+			}
+		}
+		.para{
+			left: 2rem;
+			top: 26rem;
+			font-size: 1.2rem;
+			&::before{
+				font-size: .8rem;
+			}
+			&::after{
+				font-size: .8rem;
+			}
+		}
+		.contactMe{
+			left: 3rem;
+			top: 33rem;
+		}
+	}
+}
+
+@include screen(575px){
+	.intro{
+		height: 32rem;
+		.intro-btn{
+			left: 1rem!important;
+			top: 7rem!important;
+			button{
+				font-size: 2rem!important;
+				letter-spacing: .2rem!important;
+
+			}
+			.y{
+				padding-left: 1rem!important;
+			}
+			.d{
+				padding-left: 1rem!important;
+			}
+			
+		}
+		.para{
+			left: 1rem;
+			top: 20rem;
+			font-size: .8rem;
+			p{
+				padding-left: .8rem;
+			}
+		}
+		.contactMe{
+			left: 2rem;
+			top: 25rem;
+			button{
+				font-size: 1rem;
+				padding: 5px 40px;
+			}
+			&::before{
+				font-size: .8rem;
+				display: block;
+			}
+			&::after{
+				font-size: .8rem;
+				display: block;
+			}
+		}
+	}
+}
+
+@include screen(320px){
+	.intro{
+		display: none;
+	}
+}

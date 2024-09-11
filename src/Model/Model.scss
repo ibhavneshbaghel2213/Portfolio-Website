@@ -1,0 +1,102 @@
+.modelWrapper{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+
+    // display: co;
+    top: 0;
+    // bottom: 0;
+    left: 0;
+    z-index: 5;
+    // right: 0;
+    background: rgba(173, 173, 173, 0.218);
+    justify-content: center;
+    align-items: center;
+    .model{
+        background-color: white;
+        // height: 85vh;
+        // width: 70vw;
+        border: 8px solid #121212;
+        box-shadow: 5px 1px 11px -2px #000000b3;
+        position: relative;
+        animation: fadeDown .8s;
+        // overflow: hidden;
+        // top: 2rem;
+
+        // z-index: 100;
+        height: fit-content;
+        width: fit-content;
+        max-width: 70vw;
+        max-height: 85vh;
+        min-height: 50vh;
+        min-width: 35vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .previousBtn{
+            position: absolute;
+            top: 45%;
+            left: -5%;
+            font-size: 2rem;
+            color: white;
+        }
+        .nextBtn{
+            position: absolute;
+            top: 45%;
+            right: -5%;
+            font-size: 2rem;
+            color: white;
+        }
+    }
+    .btn-style{
+        position: absolute;
+        top: 0;
+        right: 5px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: 5px;
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .projectLink{
+
+        position: fixed;
+        bottom: 0;
+        background-color: rgba(98, 230, 230, 0.948);
+        height: 3rem;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        a{
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: black;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+        }
+        &:hover{
+            background-color: rgb(19, 17, 17);
+            a{
+                color: aqua;
+            }
+        }
+    }
+}
+
+@keyframes fadeDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

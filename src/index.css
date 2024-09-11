@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #040505f0;
+  user-select: none;
+  /* width: fit-content */
+  
+  
+
+}
+body::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: aqua;
+  border-radius: 10px;
+}
+/* .top{
+  height: 48rem
+} */
+
+/* @media (max-width:991px) {
+  .top{
+    height: 40rem;
+  }
+} */

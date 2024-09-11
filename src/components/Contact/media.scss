@@ -1,0 +1,114 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin screen-1($width) {
+	@media (min-width: $width) {
+		@content;
+	}
+}
+
+@include screen(1399px){
+    .contact{
+        form{
+            margin: 2rem 15rem 2rem 15rem;
+        }
+    }
+}
+
+@include screen(1199px){
+    .contact{
+        form{
+            margin: 2rem 8rem 2rem 8rem;
+            .send{
+                margin-right: 2rem!important;
+            }
+        }
+    }
+}
+
+@include screen(991px){
+    .contact{
+        margin: 0 0 0 1rem;
+        form{
+            margin: 2rem 5rem 2rem 5rem;
+        }
+    }
+}
+
+@include screen(767px){
+    .contact{
+        form{
+            margin: 2rem ;
+            button{
+                font-size: 1rem;
+            }
+            .email{
+                font-size: 1rem;
+            }
+            &::before{
+                font-size: .7rem;
+            }
+            &::after{
+                font-size: .7rem;
+            }
+        }
+        ::before{
+            font-size: .7rem;
+        }
+        ::after{
+            font-size: .7rem;
+        }
+    }
+}
+
+@include screen(575px){
+    .contact{
+        .contact-head{
+            button{
+                font-size: 2rem;
+            }
+        } 
+        form{
+            margin: 1rem;
+            input{
+                height: 2rem;
+                border-radius: 5px;
+                &::placeholder {
+                    font-size: .9rem;
+                }
+                
+            }
+            input[type=email]{
+                margin-top: 1rem;
+            }
+            textarea{
+                height: 6rem;
+                border-radius: 5px;
+                &::placeholder{
+                    font-size: .9rem;
+                }
+            }
+            .send{
+                text-align: center;
+                margin: 0 0 1.5rem 0!important;
+            }
+            button{
+                font-size: .8rem;
+                // margin: 0;
+                
+            }
+            .email{
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+@include screen(320px){
+    .contact{
+        display: none;
+    }
+}

@@ -1,0 +1,99 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@include screen(1199px){
+    .work{
+        .workss{
+            margin-top: 3rem;
+            
+            .project{
+                width: 12rem;
+            }
+        }
+    }
+}
+
+@include screen(991px){
+    .work{
+        margin-left: 1rem;
+        .workss{
+            gap: 30px;
+        }
+    }
+}
+
+@include screen(767px){
+    .work{
+        .workTop{
+            flex-direction: column;
+        }
+        margin-left: 1.5rem;
+        .workContent{
+            margin-left: 3rem;
+            p{
+                margin-left: 1.5rem;
+            }
+            
+        }
+        .workss{
+            gap: 20px;
+            .project{
+                width: 12rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@include screen(575px){
+    .work{
+        .workContent{
+            margin-left: 1rem;
+            
+            p{
+                margin-left:0 ;
+                font-size: .5rem;
+                &::before{
+                    font-size: .8rem;
+                }
+                &::after{
+                    font-size: .8rem;
+                }
+            }
+        }
+        .workBtn{
+            .SeeMore{
+                margin: 1rem 0 1rem 0!important;
+            }
+            button{
+                font-size: .8rem ;
+            }
+        }
+        .workss{
+            gap: 10px;
+            .project{
+                width: 6rem;
+            }
+        }
+    }
+    .workHead{
+        &::before{
+            font-size: .8rem;
+        }
+        &::after{
+            font-size: .8rem;
+        }
+        button{
+            font-size: 2.3rem!important;
+        }
+    }
+}
+
+@include screen(320px){
+    .work{
+        display: none;
+    }
+}

@@ -1,0 +1,49 @@
+@mixin screen($width) {
+	@media (max-width: $width) {
+		@content;
+	}
+}
+
+@include screen(991px){
+    .scroll{
+        margin-left: 1rem;
+    }
+}
+
+@include screen(767px){
+    .scroll{
+        .scroll-left{
+            i{
+                left: 1.2rem;
+                top: 2.5rem;
+                font-size: .8rem;
+            }
+        }
+        .scroll-right{
+            right: 0;
+            i{
+                left: 1.2rem;
+                top: 2.5rem;
+                font-size: .8rem;
+            }
+        }
+        p{
+            font-size: .6rem;
+        }
+    }
+}
+
+@include screen(575px){
+    .scroll{
+        .scroll-left{
+            left: -1rem;
+        }
+        
+    }
+}
+
+@include screen(320px){
+    .scroll{
+        display: none;
+    }
+}

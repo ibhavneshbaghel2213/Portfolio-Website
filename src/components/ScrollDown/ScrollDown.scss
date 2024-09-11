@@ -1,0 +1,31 @@
+.scroll {
+    margin-left: 10rem;
+    position: relative;
+    color: white;
+    p {
+        font-size: 0.8rem;
+
+        transform: rotate(90deg);
+        animation: scroll 1s infinite;
+    }
+    .scroll-left {
+        position: absolute;
+        bottom: 7rem;
+        left: 0;
+        i {
+            position: absolute;
+            left: 1.6rem;
+            top: 3rem;
+        }
+    }
+    .scroll-right {
+        position: absolute;
+        bottom: 7rem;
+        right: 2rem;
+        i {
+            position: absolute;
+            left: 1.6rem;
+            top: 3rem;
+        }
+    }
+}

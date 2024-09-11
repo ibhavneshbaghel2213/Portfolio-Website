@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+.about2{
+    margin: 0 0 0 10rem;
+    .aboutContent{
+        display: flex;
+        gap: 3rem;
+        // align-items: center;
+        // justify-content: space-between;
+        .expirence{
+            padding-left: 7rem;
+            flex-basis: 50%;
+            .boxContainer{
+                padding: 2rem;
+                color: white;
+                font-family: 'Poor Story', cursive;
+                background-color: #131212;
+                box-shadow: -2px -4px 14px 4px #7b7777;
+                width: 25rem;
+                h2{
+                    font-weight: 900;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    margin: 0;
+                    &:last-child{
+                        margin-top: 1.5rem;
+                    }
+                    &:nth-child(2){
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        letter-spacing: .15rem;
+                    }
+                }
+                &:first-child{
+                    margin-bottom: 4rem;
+                }
+            }
+        }
+    }
+    .aboutMe {
+        flex-basis: 50%;
+        margin-top: 2rem;
+        padding-left: 2rem;
+        a {
+            color: aqua;
+            text-decoration: none;
+        }
+        &::before {
+            content: "<p>";
+            display: block;
+            font-family: "Indie Flower", cursive;
+            color: grey;
+            font-size: 1rem;
+        }
+        &::after {
+            content: "</p>";
+            display: block;
+            font-family: "Indie Flower", cursive;
+            color: grey;
+            font-size: 1rem;
+        }
+        p {
+            color: white;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: lighter;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.errorPage {
+    h1 {
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 3rem;
+        color: rgb(192, 42, 42);
+    }
+    p {
+        margin: 5rem 0 0 37rem;
+        border: 1px solid white;
+        width: fit-content;
+        padding: 20px;
+    }
+    .errorLink {
+        text-decoration: none;
+        font-size: 2rem;
+        color: aqua;
+        &:hover {
+            color: purple;
+        }
+    }
+}
