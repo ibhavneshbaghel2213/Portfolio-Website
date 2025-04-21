@@ -17,7 +17,6 @@ stages:
           provider: CodeStarSourceConnection
           version: 1
         configuration:
-          ConnectionArn: <CodeStar_Connection_ARN>
           FullRepositoryId: ibhavneshbaghel2213/Portfolio-Website
           BranchName: main
         outputArtifacts:
